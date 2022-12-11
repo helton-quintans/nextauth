@@ -22,6 +22,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   async function signIn({ email, password }: SignInCredentials) {
     console.log({ email, password });
   }
+  
   return (
     <AuthContext.Provider value={{ signIn, isAuthenticated }}>
       {children}
