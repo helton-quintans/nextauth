@@ -9,8 +9,18 @@ const Home: NextPage = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+  const handleSubmit = () => {
+    const data = {
+      email,
+      password,
+    } 
+
+    console.log(data)
+
+  }
+
   return (
-    <form className={styles.container}>
+    <form onSubmit={handleSubmit} className={styles.container}>
       <input type="email" value={email} id="" onChange={e => setEmail(e.target.value)} />
       <input type="password" value={password} id="" onChange={e => setPassword(e.target.value)}/>
       <button type="submit">Entrar</button>
