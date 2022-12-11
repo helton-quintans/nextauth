@@ -10,10 +10,11 @@ const Home: NextPage = () => {
   const [password, setPassword] = useState("")
 
   return (
-    <div className={styles.container}>
-      <input type="email" name="" id="" />
-      <input type="password" name="" id="" />
-    </div>
+    <form className={styles.container}>
+      <input type="email" value={email} id="" onChange={e => setEmail(e.target.value)} />
+      <input type="password" value={password} id="" onChange={e => setPassword(e.target.value)}/>
+      <button type="submit">Entrar</button>
+    </form>
   );
 };
 
